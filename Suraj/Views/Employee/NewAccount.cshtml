@@ -1,0 +1,57 @@
+﻿@model Suraj.DbContexts.UserInfo
+
+
+<style>
+    #cn {
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 50px;
+    }
+
+    .clr {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div id="cn" class="col-sm-4 mx-auto">
+            <p style="font-size: 20px; font-weight: bold;">New Account</p>
+
+            <form asp-controller="Employee" asp-action="NewAccount" class="form-group " method="post">
+                <div>
+                    <label>Your Name</label>
+                    <input asp-for="Name" placeholder="Enter Your Name" class="form-control" />
+                    <span asp-validation-for="Name" class="clr"></span>
+                </div>
+                <div>
+                    <label>Your Email</label>
+                    <input asp-for="Email" placeholder="Enter Your Email" class="form-control" />
+                    <span asp-validation-for="Email" class="clr"></span>
+                </div>
+                <div>
+                    <label>Your Address</label>
+                    <input asp-for="Address" placeholder="Enter Your Address" class="form-control" />
+                    <span asp-validation-for="Address" class="clr"></span>
+                </div>
+                <div>
+                    <label>Your Dept</label>
+                    <input asp-for="Dept" placeholder="Enter Your Dept" class="form-control" />
+                    <span asp-validation-for="Dept" class="clr"></span>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input asp-for="Password" placeholder="Enter Your Password" class="form-control" />
+                    <span asp-validation-for="Password" class="clr"></span>
+                </div>
+                <br />
+                <input type="submit" class="btn btn-success btn-block" />
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
